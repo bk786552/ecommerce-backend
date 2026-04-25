@@ -9,6 +9,7 @@ const app = express();
 app.use(cors({
   origin: function (origin, callback) {
     const allowed = [
+      "http://localhost:5173", // ✅ ADD THIS
       "https://raj52-kuwait.quicklearners.online",
       "https://www.raj52-kuwait.quicklearners.online"
     ];

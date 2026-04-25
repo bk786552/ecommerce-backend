@@ -28,7 +28,10 @@ const razorpay = new Razorpay({
   key_id: "rzp_live_SgpyFzRexYyhaH",        // rzp_live_...
   key_secret: "he7PLSDkciDwEKK8vgzoIMT7" // keep secret!
 });
-
+ 
+app.get("/", (req, res) => {
+  res.status(200).send("Server is live ✅");
+});
 // 1) Create order
 app.post("/api/create-order", async (req, res) => {
   try {
@@ -82,4 +85,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log("Server running on port", PORT);
 });
-console.log("KEY:", process.env.RZP_KEY_ID);
